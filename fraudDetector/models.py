@@ -13,6 +13,7 @@ class Address(models.Model):
 
     def __str__(self):
         return self.postcode
+
 class CreditCard(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     last_four_digits = models.CharField(max_length=4)
